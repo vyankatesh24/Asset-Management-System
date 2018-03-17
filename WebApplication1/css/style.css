@@ -1,0 +1,484 @@
+﻿html, body {
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    height: 100%;
+}
+/*div {
+    border:1px solid black;
+}*/
+::selection {
+    background-color:rgba(251,10,114,0.2);
+}
+.linkbutton {
+    color:white;
+    text-decoration:none;
+}
+.linkbutton:hover {
+    text-decoration:underline;
+}
+h1 span.a1 {
+    color: #2fa68e;
+}
+h1 span.a2 {
+    color: #2fa68e;
+    font-size:80px;
+}
+/*button styling*/
+.button {
+    position: relative;
+    padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+    float: left;
+    border-radius: 10px;
+    font-family: 'Helvetica', cursive;
+    font-size: 25px;
+    color: #FFF;
+    text-decoration: none;  
+    background-color: #a90329;
+    border-bottom: 5px solid #A81953;
+    text-shadow: 0px -2px #A81953;
+    /* Animation */
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+    
+}
+
+.button:hover, 
+.button:focus {
+    text-decoration: none;
+    color: #fff;
+}
+
+.button:active {
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}
+/*button styling ends*/
+
+/*dropdown styling start*/
+.select
+{
+width: 200px;
+height: 29px;
+border-radius: 3px;
+border: 1px solid #CCC;
+font-weight: 200;
+font-size: 15px;
+font-family: Verdana;
+box-shadow: 1px 1px 5px #CCC;
+}
+.select:hover
+{
+width: 200px;
+height: 29px;
+border-radius: 3px;
+border: 1px solid #CCC;
+font-weight: 200;
+font-size: 15px;
+font-family: Verdana;
+box-shadow: 1px 1px 5px #CCC;
+}
+/*dropdown styling ends*/
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+/* Header */
+header {
+    width: 100%;
+    min-height: 110px;
+    /*background: #A81953;*/
+    position: relative;
+    border-bottom: groove #a90329 10px;
+    background: #a90329;
+    background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #8f0222 44%, #6d0019 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    background: radial-gradient(ellipse at center, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 );
+    top: 0px;
+    left: 0px;
+    z-index:1000;
+    /*overflow:hidden;*/
+}
+
+    header .logo {
+        height: 110px;
+        width: 8.154%;
+        background-image: url("/images/logo.jpg");
+        background-size:100% 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-left: 11.119%;
+        float: left;
+    }
+
+    header .name {
+        width: 33.358%;
+        height: 110px;
+        margin-left: 1.4828%;
+        float: left;
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        
+    }
+        header .name h1 {
+            font-size: 30px;
+            font-weight:600;
+            line-height:1.2;
+        }
+
+    header .loginForm {
+        width: 39.5%;
+        height: 110px;
+        float: left;
+        text-align: left;
+        margin-left: 2%;
+    }
+
+        header .loginForm #TextBox11, #TextBox12, #Button11 {
+            border-radius: 10px;
+            margin: 5px;
+            background-color: #a90329;
+            border-color: white;
+            color: white;
+            border-width: 3px;
+        }
+
+    header #Label1, #Label2 {
+        color: white;
+        margin-left: 1.0378%;
+
+    }
+    /* Style The Dropdown Button */
+header nav {
+    width: 600px;
+    height: 110px;
+    position: relative;
+    float:left;
+    margin-left: 20px;
+}
+.dropbtn {
+   background: #a90329;
+    background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #8f0222 44%, #6d0019 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    background: radial-gradient(ellipse at center, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 );
+    color: white;
+    /*padding: 16px;*/
+    font-size: 20px;
+    cursor: pointer;
+    width:100px;
+    height:110px;
+    text-align:center;
+    border-bottom:none;
+    border-top:none;
+     border-style: dotted;
+        border-color: black;
+        border-width: 2px;
+        border-bottom:none;
+    border-top:none;
+    margin-left:5px;
+}
+/* The container <div> - needed to position the dropdown content */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index:100;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #A81953;color:white;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background: rgba(255,255,255,0.8);
+    color: #A81953;
+    text-underline-position: below;
+}
+header .menu11 {
+    width:300px;
+    height:105px;
+    float:right;
+    margin-right:100px;
+    border-left:inset;
+    padding-left:10px;
+    /*border-right:dotted;*/
+    border-color:black;
+    border-width:2px;
+    color:white;
+    padding-top:5px;
+    padding-right:10px;
+       /*background: #a90329;
+    background: -moz-radial-gradient(center, ellipse cover, #a90329 0%, #8f0222 44%, #6d0019 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    background: radial-gradient(ellipse at center, #a90329 0%,#8f0222 44%,#6d0019 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=1 );*/
+
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    height: 30px;
+    background: #a90329;
+}
+
+    footer .text {
+        color: white;
+        padding: 8px;
+        text-align: center;
+    }
+/* Main Page Content */
+.main {
+    height: 560px;
+    width: 100%;
+    position: relative;
+    background: url("/images/1.jpg") 0px 0px;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    z-index:-1;
+}
+
+    .main .opacity {
+        height: 560px;
+        width: 100%;
+        position: absolute;
+        background: rgba(0,0,0,0.7);
+        z-index:-1;
+    }
+
+    .main .pgtxt {
+        width: 66.7161%;
+        height: 350px;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        z-index:-1;
+        background-image:url("/images/5.png") ;
+        background-size:100% 100%;
+
+    }
+
+        .main .pgtxt h1 {
+            font-size: 60px;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            line-height: 1.2;
+            z-index:-1;
+            text-decoration:solid;
+        }
+
+/* Dashboard 
+header nav {
+    width: 700px;
+    height: 80px;
+    position: relative;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+    header nav ul#menu {
+        list-style: none;
+        text-align: center;
+        width: 700px;
+        padding-bottom: 0px;
+        padding-top: 10px;
+        margin: 0;
+    }
+
+    header nav li {
+        display: inline-block;
+        position: relative;
+        border-style: dotted;
+        border-color: black;
+        border-width: 2px;
+        border-radius: 5PX;
+    }
+
+        header nav li a {
+            font-size: 20px;
+            line-height: 70px;
+            display: block;
+            color: white;
+            padding: 0 10px 0 10px;
+            text-decoration: none;
+            outline: none;
+            text-shadow: 20px 12px 12px #333;
+        }
+
+            header nav li a:hover {
+                background-color: white;
+                color: #a90329;
+            }
+
+        header nav li:hover {
+            background-color: white;
+        }
+    */
+/* Add_user form */
+.container_contentpage {
+    width:100%;
+    min-height:560px;
+    position:relative;
+    background:rgba(169,3,41,0.1);
+    overflow:auto;
+}
+.content_contentpage {
+    width:75%;
+    min-height:560px;
+    margin:0 auto;
+    background:white;
+    border-left:groove 5px #a90329 ;
+    border-right:groove 5px #a90329 ;
+    overflow:auto;
+}
+.content_adduser {
+    width:100%;
+    min-height:350px;
+}
+.content_allocation {
+    min-height:560px;
+    overflow:auto;
+}
+table {
+    font-size:20px;
+    color:#ff006e;
+    padding-top:50px;
+    margin:0 auto;
+}
+.th {
+    font-size:36px;
+    text-align:center;
+}
+th {
+    font-size:18px;
+}
+.td1 {
+    text-align:right;
+}
+
+
+.alltextbox {
+   width: 200px;
+height: 15px;
+border-radius: 3px;
+border: 1px solid #CCC;
+padding: 8px;
+font-weight: 200;
+font-size: 15px;
+font-family: Verdana;
+box-shadow: 1px 1px 5px #CCC;
+}
+
+    .alltextbox:hover {
+        width: 200px;
+height: 15px;
+border-radius: 3px;
+border: 1px solid #CCC;
+font-weight: 200;
+font-size: 15px;
+font-family: Verdana;
+box-shadow: 1px 1px 5px #CCC;
+    }
+
+    .textarea
+{
+width: 200px;
+height: 25px;
+border-radius: 3px;
+border: 1px solid #CCC;
+padding: 8px;
+font-weight: 200;
+font-size: 15px;
+font-family: Verdana;
+box-shadow: 1px 1px 5px #CCC;
+}
+.textarea:hover
+{
+width: 200px;
+height: 25px;
+border-radius: 3px;
+border: 1px solid #aaa;
+padding: 8px;
+font-weight: 200;
+font-size: 15px;
+font-family: Verdana;
+box-shadow: 1px 1px 5px #CCC;
+}
+
+.content_accinfo {
+    margin: 0 auto;
+    width:100%;
+    
+}
+.myprofile {
+    padding-left:300px;
+}
+.changepass {
+}
+.forgetpass {
+    height: 560px;
+    width: 100%;
+    position: relative;
+}
+
+/*Report Style*/
+.containerReport {
+            width: 100%;
+            min-height: 670px;
+            color: black;
+        }
+
+        .mainReport {
+            width: 90%;
+            margin: 0 auto;
+            border: 3px solid black;
+            min-height: 670px;
+        }
+
+        .headerReport {
+            width: 80%;
+            min-height: 150px;
+            font-size: 36px;
+            text-align: center;
+            margin: 0 auto;
+            border-bottom: 3px solid black;
+        }
+            .headerReport span {
+                font-size:medium;
+            }
+.contentReport {
+    text-align: center;
+    font-size: large;
+}
+
+        /*Report style end*/

@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CDF1B650-354F-4B76-ADF2-25278D422613}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1user\approve_br.aspx" />
+    <Content Include="1admin\approve_rr.aspx" />
+    <Content Include="1admin\approve_scr.aspx" />
+    <Content Include="1admin\editORdelete_Asset.aspx" />
+    <Content Include="1admin\editORdelete_dept.aspx" />
+    <Content Include="1admin\transfer_asset.aspx" />
+    <Content Include="1user\accinfo.aspx" />
+    <Content Include="1admin\add_asset.aspx" />
+    <Content Include="1admin\add_dept.aspx" />
+    <Content Include="1admin\add_user.aspx" />
+    <Content Include="1admin\allocation.aspx" />
+    <Content Include="1user\repair_req.aspx" />
+    <Content Include="1user\view_asset.aspx" />
+    <Content Include="1user\view_brequest.aspx" />
+    <Content Include="1user\view_Rrequest.aspx" />
+    <Content Include="1user\view_srequest.aspx" />
+    <Content Include="change_pass.aspx" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Dashboard.aspx" />
+    <Content Include="forgetPassword.aspx" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\4.png" />
+    <Content Include="images\7.png" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="1user\borrow_R.aspx" />
+    <Content Include="1user\repair_R.aspx" />
+    <Content Include="1user\scrap_R.aspx" />
+    <Content Include="images\2.png" />
+    <Content Include="images\3.png" />
+    <Content Include="images\6.png" />
+    <Content Include="images\5.png" />
+    <Content Include="my_profile.aspx" />
+    <Content Include="Reports\Report_addAsset.aspx" />
+    <Content Include="Reports\Report_borrow.aspx" />
+    <Content Include="Reports\Report_borrowAsset.aspx" />
+    <Content Include="Reports\report_newAsset.aspx" />
+    <Content Include="Reports\Report_repair.aspx" />
+    <Content Include="Reports\report_repairAsset.aspx" />
+    <Content Include="Reports\Report_scrap.aspx" />
+    <Content Include="Reports\Report_scrapAsset.aspx" />
+    <Content Include="Report_AddAsset.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Default.aspx" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1user\approve_br.aspx.cs">
+      <DependentUpon>approve_br.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1user\approve_br.aspx.designer.cs">
+      <DependentUpon>approve_br.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1admin\approve_rr.aspx.cs">
+      <DependentUpon>approve_rr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1admin\approve_rr.aspx.designer.cs">
+      <DependentUpon>approve_rr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1admin\approve_scr.aspx.cs">
+      <DependentUpon>approve_scr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1admin\approve_scr.aspx.designer.cs">
+      <DependentUpon>approve_scr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1admin\editORdelete_Asset.aspx.cs">
+      <DependentUpon>editORdelete_Asset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1admin\editORdelete_Asset.aspx.designer.cs">
+      <DependentUpon>editORdelete_Asset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1admin\editORdelete_dept.aspx.cs">
+      <DependentUpon>editORdelete_dept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1admin\editORdelete_dept.aspx.designer.cs">
+      <DependentUpon>editORdelete_dept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1admin\transfer_asset.aspx.cs">
+      <DependentUpon>transfer_asset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1admin\transfer_asset.aspx.designer.cs">
+      <DependentUpon>transfer_asset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1user\accinfo.aspx.cs">
+      <DependentUpon>accinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1user\accinfo.aspx.designer.cs">
+      <DependentUpon>accinfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1admin\add_asset.aspx.cs">
+      <DependentUpon>add_asset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1admin\add_asset.aspx.designer.cs">
+      <DependentUpon>add_asset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1admin\add_dept.aspx.cs">
+      <DependentUpon>add_dept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1admin\add_dept.aspx.designer.cs">
+      <DependentUpon>add_dept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1admin\add_user.aspx.cs">
+      <DependentUpon>add_user.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1admin\add_user.aspx.designer.cs">
+      <DependentUpon>add_user.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1admin\allocation.aspx.cs">
+      <DependentUpon>allocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1admin\allocation.aspx.designer.cs">
+      <DependentUpon>allocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1user\repair_req.aspx.cs">
+      <DependentUpon>repair_req.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1user\repair_req.aspx.designer.cs">
+      <DependentUpon>repair_req.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1user\view_asset.aspx.cs">
+      <DependentUpon>view_asset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1user\view_asset.aspx.designer.cs">
+      <DependentUpon>view_asset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1user\view_brequest.aspx.cs">
+      <DependentUpon>view_brequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1user\view_brequest.aspx.designer.cs">
+      <DependentUpon>view_brequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1user\view_Rrequest.aspx.cs">
+      <DependentUpon>view_Rrequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1user\view_Rrequest.aspx.designer.cs">
+      <DependentUpon>view_Rrequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1user\view_srequest.aspx.cs">
+      <DependentUpon>view_srequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1user\view_srequest.aspx.designer.cs">
+      <DependentUpon>view_srequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="asset.Master.cs">
+      <DependentUpon>asset.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="asset.Master.designer.cs">
+      <DependentUpon>asset.Master</DependentUpon>
+    </Compile>
+    <Compile Include="change_pass.aspx.cs">
+      <DependentUpon>change_pass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="change_pass.aspx.designer.cs">
+      <DependentUpon>change_pass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forgetPassword.aspx.cs">
+      <DependentUpon>forgetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="forgetPassword.aspx.designer.cs">
+      <DependentUpon>forgetPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="my_profile.aspx.cs">
+      <DependentUpon>my_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="my_profile.aspx.designer.cs">
+      <DependentUpon>my_profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1user\borrow_R.aspx.cs">
+      <DependentUpon>borrow_R.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1user\borrow_R.aspx.designer.cs">
+      <DependentUpon>borrow_R.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1user\repair_R.aspx.cs">
+      <DependentUpon>repair_R.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1user\repair_R.aspx.designer.cs">
+      <DependentUpon>repair_R.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="1user\scrap_R.aspx.cs">
+      <DependentUpon>scrap_R.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="1user\scrap_R.aspx.designer.cs">
+      <DependentUpon>scrap_R.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_addAsset.aspx.cs">
+      <DependentUpon>Report_addAsset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_addAsset.aspx.designer.cs">
+      <DependentUpon>Report_addAsset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_borrow.aspx.cs">
+      <DependentUpon>Report_borrow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_borrow.aspx.designer.cs">
+      <DependentUpon>Report_borrow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_borrowAsset.aspx.cs">
+      <DependentUpon>Report_borrowAsset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_borrowAsset.aspx.designer.cs">
+      <DependentUpon>Report_borrowAsset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\report_newAsset.aspx.cs">
+      <DependentUpon>report_newAsset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\report_newAsset.aspx.designer.cs">
+      <DependentUpon>report_newAsset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_repair.aspx.cs">
+      <DependentUpon>Report_repair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_repair.aspx.designer.cs">
+      <DependentUpon>Report_repair.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\report_repairAsset.aspx.cs">
+      <DependentUpon>report_repairAsset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\report_repairAsset.aspx.designer.cs">
+      <DependentUpon>report_repairAsset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_scrap.aspx.cs">
+      <DependentUpon>Report_scrap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_scrap.aspx.designer.cs">
+      <DependentUpon>Report_scrap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Report_scrapAsset.aspx.cs">
+      <DependentUpon>Report_scrapAsset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reports\Report_scrapAsset.aspx.designer.cs">
+      <DependentUpon>Report_scrapAsset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report_AddAsset.aspx.cs">
+      <DependentUpon>Report_AddAsset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report_AddAsset.aspx.designer.cs">
+      <DependentUpon>Report_AddAsset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="asset.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54098</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50301/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

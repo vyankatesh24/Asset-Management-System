@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="asset.master.cs" Inherits="WebApplication1.asset" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+        <header>
+            <div class="logo"></div>
+            <%--<nav>
+                <ul class="menu">
+                    <li><a href="/Default.aspx">Asset</a></li>
+                    <li><a href="#">Request</a></li>
+                    <li><a href="#">Workflow</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>--%>
+            <nav>
+                <div class="dropdown">
+                    <%--                    <button class="dropbtn">Home</button>--%>
+                    <asp:Button ID="btn_home" runat="server" CssClass="dropbtn" Text="Home" OnClick="btn_home_Click" CausesValidation="False" UseSubmitBehavior="False" />
+                    <div class="dropdown-content">
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Asset</button>
+                    <div class="dropdown-content">
+                        <a id="admin1" runat="server" href="/1admin/add_asset.aspx">Add Asset</a>
+                        <a id="admin2" runat="server" href="/1admin/allocation.aspx">Allocation</a>
+                        <a id="admin3" runat="server" href="/1admin/transfer_asset.aspx">Transfer Asset</a>
+                        <a id="user2" runat="server" href="/1user/accinfo.aspx">Accession Details</a>
+                        <a id="user3" runat="server" href="/1user/view_asset.aspx">View Asset</a>
+                    </div>
+                </div>
+                <div id="user1" runat="server" class="dropdown">
+                    <button class="dropbtn">Request</button>
+                    <div class="dropdown-content">
+                        <a href="/1user/borrow_R.aspx">Borrow Request</a>
+                        <a href="/1user/view_brequest.aspx">View Borrow Request</a>
+                        <a href="/1user/repair_R.aspx">Repair Request</a>
+                        <a href="/1user/view_Rrequest.aspx">View Repair Request</a>
+                        <a href="/1user/scrap_R.aspx">Scrap Request</a>
+                        <a href="/1user/view_srequest.aspx">View Scrap Request</a>
+                        <a href="/1user/approve_br.aspx">Approve Borrow Request</a>
+
+                    </div>
+                </div>
+                <div id="admin4" class="dropdown" runat="server">
+                    <button class="dropbtn">Workflow</button>
+                    <div class="dropdown-content">
+                        <a href="/1admin/add_user.aspx">Add User</a>
+                        <a href="/1admin/add_dept.aspx">Add Department</a>
+                        <a href="/1admin/approve_scr.aspx">Approve Scrap Request</a>
+                        <a href="/1admin/approve_rr.aspx">Approve Repair Request</a>
+
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Reports</button>
+                    <div class="dropdown-content">
+                        <a href="/Reports/Report_addAsset.aspx">New Assets</a>
+                        <a href="/Reports/Report_repair.aspx">Asset Repair</a>
+                        <a href="/Reports/Report_scrap.aspx">Asset Scrap</a>
+                        <%--<a href="/Reports/Report_borrow.aspx">Borrow Asset</a>--%>
+                    </div>
+                </div>
+            </nav>
+            <div class="menu11">
+                <a href="/my_profile.aspx" class="linkbutton">My Profile</a> | 
+            <a href="/change_pass.aspx" class="linkbutton">Change Password</a> | 
+            <asp:LinkButton ID="btn_logout" runat="server" OnClick="btn_logout_Click" CssClass="linkbutton">Logout</asp:LinkButton>
+                | 
+            <a href="#" class="linkbutton">Help!</a>
+                <br />
+                <br />
+                <h2 style="font-size: 20px; font-style: italic;">Welcome</h2>
+                <br />
+                <asp:Label ID="lbl_username" runat="server" Text="Guest" Font-Bold="True" Font-Size="Larger" ForeColor="#FF66FF"></asp:Label>
+
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <footer>
+            <div class="text">
+                &copy 2016 Gogate Jogalekar College,Ratnagiri | All Rights Reserved.
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
